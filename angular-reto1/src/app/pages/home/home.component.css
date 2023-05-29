@@ -1,0 +1,12 @@
+.inicio{
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    height: 60%;
+    width: 100%;
+    
+} 

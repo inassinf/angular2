@@ -1,0 +1,12 @@
+.main {
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 80%;
+    width: 100%;
+    background-color: white;
+    color: black;
+   
+} 
