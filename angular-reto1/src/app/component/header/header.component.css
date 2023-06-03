@@ -1,4 +1,18 @@
-header {
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'meta';
+}
+
+h1{
+    color: white;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cabecera {
 
 
     width: 100%;
