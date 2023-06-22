@@ -18,11 +18,12 @@
 
   <h1>Editar Datos</h1>
   <input id="title" type="text" class="input" #newName required placeholder="Nombre">
-  <input id="title" type="text" class="input" #newLastname required placeholder="Apellido">
+  <input id="title" type="text" class="input" #newLast_name required placeholder="Apellido">
   <input id="title" type="email" class="input" #newEmail required placeholder="email">
   <input id="title" type="url" class="input" #newPhoto required placeholder="url">
 
-  <button class="boton_modificar" type="reset" (click)= newDates (name.value, lastname.value, email.value, profile.photo.value)>
+  <button class="boton_modificar" type="button" (click)= "newDates (newName.value, newLast_name.value, newEmail.value, newPhoto.value)">
+    Modificar
 
   </button>
 
