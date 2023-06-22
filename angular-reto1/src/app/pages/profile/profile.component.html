@@ -1,14 +1,14 @@
 <div>
-
+<a class="pagina-profile">
  <form class="caja1" action="">
     <div class="img-perfil">
-        <img src= "{{profile.photo}}"  alt="" srcset="">
+        <img src= "{{newUser.photo}}"  alt="" srcset="">
     </div>
     <h2 class="titleName">{{newUser.name}} {{newUser.last_name}} </h2>
 
     <div class="perfil">
         <h5 class="input">{{newUser.name}}</h5>
-        <h5 class="input">{{newUser.lastname}}</h5>
+        <h5 class="input">{{newUser.last_name}}</h5>
         <h5 class="input">{{newUser.email}}</h5>
     </div>
 
@@ -22,13 +22,13 @@
   <input id="title" type="email" class="input" #newEmail required placeholder="email">
   <input id="title" type="url" class="input" #newPhoto required placeholder="url">
 
-  <button class="boton_modificar" type="reset" (click)=modify (name.value, lastname.value, email.value, profile.photo.value)>
-    
+  <button class="boton_modificar" type="reset" (click)= newDates (name.value, lastname.value, email.value, profile.photo.value)>
+
   </button>
 
  </form>
 
 
-
+</a>
 
 </div>
