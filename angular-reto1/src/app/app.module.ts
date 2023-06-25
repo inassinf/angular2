@@ -10,7 +10,8 @@ import { FormRegisterComponent } from './component/form-register/form-register.c
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
-import { LibrosPipe } from './pipes/libros.pipe';
+// import { LibrosPipe } from './pipes/libros.pipe';
+import { CardComponent } from './component/card/card.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { LibrosPipe } from './pipes/libros.pipe';
     RegisterComponent,
     ProfileComponent,
     BooksComponent,
-    LibrosPipe,
+    // LibrosPipe,
+    CardComponent,
    
   ],
   imports: [
