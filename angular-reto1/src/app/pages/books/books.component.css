@@ -1,0 +1,53 @@
+.muestra_libros{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 30px;
+
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 200px;
+    padding-left: 5px;
+    margin-left: 3px;
+}
+
+.formulario{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5000px;
+    width: 1500px;
+}
+
+.vacio-tarjetas{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 150px;
+
+}
+
+.texto-rojo{
+  color: red;
+
+}
+
+.texto-azul{
+    color: blue;
+
+}
