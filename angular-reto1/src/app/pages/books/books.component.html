@@ -1,23 +1,22 @@
-<main class="muestra_libros" *ngIf= "books.length>0; else noHayLibros">
+<div class="muestra_libros"  *ngIf="books.length > 0; else noHay">
 
-    
-    <ng-container *ngFor="let book of books; let even = even;">
-        <app-card [book]="book" [even]="even" (titleBook) = "borrarCard($event)"></app-card>
-    </ng-container>
-<!--         
-        <img class= "portada" src="{{books.photo}}">
-        <div class= "tarjeta">
-            <h4 class="titulo" [ngClass] = "even === 0 ? 'texto-rojo' : 'texto-azul'">{{books.title}}</h4>
-            <h5 class="author">{{books.author}}</h5>
-            <h6 class="price">{{books.price}}</h6>
-        </div> -->
+    <div class="card" *ngFor="let book of books; let even = even;">
+        <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
+        <div class="tarjeta">
+            <h6>{{book.type}}</h6>
+            <h4 class="titulo">{{book.title}}</h4>
+            <p>Author: {{book.author}}</p>
+            <p>{{book.id_book | libros}}</p>
+            <h5>{{book.price}}€</h5>
+        </div>
+        
+        <a href="#" class="btn" [ngClass]="even ? 'bg-gray' : 'bg-green' ">Comprar</a>
+    </div>
 
-   
-
-</main>
+</div>
 
 
-<ng-template #noHayLibros>
+<ng-template #noHay>
     <div class="muestra_libros">
         <h4>No disponemos de este libro actualmente</h4>
     </div>
@@ -32,7 +31,7 @@
                 <h3>Agregar Libro</h3>
             </div>
 
-            <div class="formul">
+            <div class="datos">
 
                 <input type="text" class="form-control" id="title" placeholder="Titulo" #title>
 
@@ -48,7 +47,7 @@
 
             </div>
 
-            <button type="reset" class="btn btn-success" (click)="agregarLibro(title.value, type.value, author.value, price.value, photo.value, id_book.value)">Agregar Libro</button>
+            <button type="reset" class="btn btn-success" (click)="addLibro(title.value, type.value, author.value, price.value, photo.value, id_book.value)">Agregar Libro</button>
 
     </form>
 </div>
