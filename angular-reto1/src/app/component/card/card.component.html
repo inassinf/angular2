@@ -1,54 +1,18 @@
-<!-- <main class="muestra_libros" *ngIf= "books.length>0; else noHayLibros">
 
-    
-    <ng-container *ngFor="let book of books; let even = even;">
-        <app-card [book]="book" [even]="even" (titleBook) = "borrarCard($event)"></app-card>
-    </ng-container>
-        
-        <img class= "portada" src="{{books.photo}}">
-        <div class= "tarjeta">
-            <h4 class="titulo" [ngClass] = "even === 0 ? 'texto-rojo' : 'texto-azul'">{{books.title}}</h4>
-            <h5 class="author">{{books.author}}</h5>
-            <h6 class="price">{{books.price}}</h6>
+    <div class="card" style="width: 18rem;">
+        <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
+        <button type="button" class="btn-close" aria-label="Close" (click)="enviarTitle()">X</button>    
+
+        <div class="tarjeta">
+            <h6>{{book.type}}</h6>
+            <h4 class="titulo">{{book.title}}</h4>
+            <p>Author: {{book.author}}</p>
+            <!-- <p>{{book.id_book | libros}}</p> -->
+            <h5>{{book.price}}€</h5>
+            <a href="#" class="btn" [ngClass]="even ? 'bg-gray' : 'bg-green' ">Comprar</a>
+
         </div>
-
-   
-
-</main>
-
-
-<ng-template #noHayLibros>
-    <div class="muestra_libros">
-        <h4>No disponemos de este libro actualmente</h4>
-    </div>
-</ng-template>
-
-
-<div class="formulario">
-
-    <form>
-
-            <div class="agregar">
-                <h3>Agregar Libro</h3>
-            </div>
-
-            <div class="formul">
-
-                <input type="text" class="form-control" id="title" placeholder="Titulo" #title>
-
-                <input type="text" class="form-control" id="type" placeholder="Literatura/CienciaFiccion" #type>
-
-                <input type="text" class="form-control" id="author" placeholder="Autor" #author>
-
-                <input type="text" class="form-control" id="price" placeholder="Precio" #price>
         
-                <input type="text" class="form-control" id="photo" placeholder="Photo" #photo>
+    </div>
 
-                <input type="text" class="form-control" id="id_book" placeholder="Codigo" #id_book>
 
-            </div>
-
-            <button type="reset" class="btn btn-success" (click)="agregarLibro(title.value, type.value, author.value, price.value, photo.value, id_book.value)">Agregar Libro</button>
-
-    </form>
-</div> -->
