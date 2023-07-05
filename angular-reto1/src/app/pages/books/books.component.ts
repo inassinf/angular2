@@ -29,4 +29,10 @@ addLibro(title:string, type:string, author:string, price:number, photo:string, i
 
 } 
 
+deleteCard(titleBook:string):void{
+
+  this.books = this.books.filter(Book => Book.title != titleBook);
+}
+
+
 }

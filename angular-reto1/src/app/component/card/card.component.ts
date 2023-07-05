@@ -9,11 +9,11 @@ import { Book } from 'src/app/models/books';
 export class CardComponent {
 
   @Input() book: Book;
-  @Output() titleBook = new EventEmitter<string>();
+  @Output() delete = new EventEmitter<string>();
   @Input() even: boolean;
 
-  enviarTitle():void{
-    this.titleBook.emit(this.book.title)
+  deleteCard(): void{
+    this.delete.emit(this.book.title)
   }
 
 }

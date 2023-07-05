@@ -1,19 +1,19 @@
 
     <div class="card" style="width: 18rem;">
         <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
-        <button type="button" class="btn-close" aria-label="Close" (click)="enviarTitle()">X</button>    
+        <button class="button-close" type="button" aria-label="Close" (click)="deleteCard()">X</button> 
 
         <div class="tarjeta">
             <h6>{{book.type}}</h6>
             <h4 class="titulo">{{book.title}}</h4>
             <p>Author: {{book.author}}</p>
-            <!-- <p>{{book.id_book | libros}}</p> -->
+            <p>{{book.id_book | libros}}</p>
             <h5>{{book.price}}€</h5>
-            <!-- <a href="#" class="btn" [ngStyle]="{background: even ? 'gray' : 'green'}">Comprar</a> -->
-
-    
 
         </div>
+        
+        <!-- <a href="#" class="btn" [ngStyle]="{background: even ? 'gray' : 'green'}">Comprar</a> -->
+
         
     </div>
 

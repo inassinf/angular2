@@ -1,6 +1,11 @@
 <div class="muestra_libros"  *ngIf="books.length > 0; else noHay">
 
-    <div class="card" *ngFor="let book of books; let even = even;">
+    <ng-container >
+        <app-card *ngFor="let book of books; let even = even;" [book] = "book" [even] = "even" (delete) ="deleteCard($event)">X</app-card>
+    </ng-container>
+
+
+    <!-- <div class="card" *ngFor="let book of books; let even = even;">
         <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
         <div class="tarjeta">
             <h6>{{book.type}}</h6>
@@ -10,8 +15,9 @@
             <h5>{{book.price}}€</h5>
         </div>
         <a href="#" class="btn" [ngStyle]="{background: even ? 'gray' : 'green'}">Comprar</a>
-    
-    </div>
+        
+        
+    </div> -->
 
 </div>
 
