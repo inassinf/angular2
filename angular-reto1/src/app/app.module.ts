@@ -25,6 +25,8 @@ import { CardComponent } from './component/card/card.component';
     ProfileComponent,
     BooksComponent,
     LibrosPipe,
+    CardComponent,
+
     
    
   ],
