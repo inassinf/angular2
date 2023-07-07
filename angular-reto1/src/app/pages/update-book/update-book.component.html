@@ -1,0 +1,30 @@
+
+<div class="formulario">
+
+    <form>
+
+            <div class="agregar">
+                <h3>Modificar Libro</h3>
+            </div>
+
+            <div class="datos">
+
+                <input type="text" class="form-control" id="title" placeholder="Titulo" #title>
+
+                <input type="text" class="form-control" id="type" placeholder="Literatura/CienciaFiccion" #type>
+
+                <input type="text" class="form-control" id="author" placeholder="Autor" #author>
+
+                <input type="text" class="form-control" id="price" placeholder="Precio" #price>
+        
+                <input type="text" class="form-control" id="photo" placeholder="Photo" #photo>
+
+                <input type="text" class="form-control" id="id_book" placeholder="Codigo" #id_book>
+
+            </div>
+
+            <button type="reset" class="btn btn-success" (click)="addLibro(title.value, type.value, author.value, price.value, photo.value, id_book.value)">Agregar Libro</button>
+
+    </form>
+</div>
+

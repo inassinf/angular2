@@ -12,6 +12,11 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 import { LibrosPipe } from './pipes/libros.pipe';
 import { CardComponent } from './component/card/card.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { FormsModule } from '@angular/forms';
+import { BooksService } from './shared/books.service';
+import { UpdateBookComponent } from "./pages/update-book/update-book.component";
+
 
 
 @NgModule({
@@ -26,15 +31,15 @@ import { CardComponent } from './component/card/card.component';
     BooksComponent,
     LibrosPipe,
     CardComponent,
-
-    
-   
+    AddBookComponent,
+    UpdateBookComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,23 +1,18 @@
 <div class="muestra_libros"  *ngIf="books.length > 0; else noHay">
 
+  <div class="ng-container">
+    <form class="d-flex" role="search">
+        <input class="form-control"  type="search" id="search" placeholder="Introduzca el libro deseado" aria-label="search" (keyup)="getOne(search_id_book.value)" #search_id_book>
+        <button class="btn btn-success" (click)="getOne(id_book)">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+    </form>
+  </div>
+
+
     <ng-container >
         <app-card *ngFor="let book of books; let even = even;" [book] = "book" [even] = "even" (delete) ="deleteCard($event)">X</app-card>
     </ng-container>
-
-
-    <!-- <div class="card" *ngFor="let book of books; let even = even;">
-        <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
-        <div class="tarjeta">
-            <h6>{{book.type}}</h6>
-            <h4 class="titulo">{{book.title}}</h4>
-            <p>Author: {{book.author}}</p>
-            <p>{{book.id_book | libros}}</p>
-            <h5>{{book.price}}€</h5>
-        </div>
-        <a href="#" class="btn" [ngStyle]="{background: even ? 'gray' : 'green'}">Comprar</a>
-        
-        
-    </div> -->
 
 </div>
 
@@ -28,32 +23,3 @@
     </div>
 </ng-template>
 
-
-<div class="formulario">
-
-    <form>
-
-            <div class="agregar">
-                <h3>Agregar Libro</h3>
-            </div>
-
-            <div class="datos">
-
-                <input type="text" class="form-control" id="title" placeholder="Titulo" #title>
-
-                <input type="text" class="form-control" id="type" placeholder="Literatura/CienciaFiccion" #type>
-
-                <input type="text" class="form-control" id="author" placeholder="Autor" #author>
-
-                <input type="text" class="form-control" id="price" placeholder="Precio" #price>
-        
-                <input type="text" class="form-control" id="photo" placeholder="Photo" #photo>
-
-                <input type="text" class="form-control" id="id_book" placeholder="Codigo" #id_book>
-
-            </div>
-
-            <button type="reset" class="btn btn-success" (click)="addLibro(title.value, type.value, author.value, price.value, photo.value, id_book.value)">Agregar Libro</button>
-
-    </form>
-</div>
