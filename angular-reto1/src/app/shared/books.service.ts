@@ -31,7 +31,7 @@ export class BooksService {
    }
 
 
-   add(book: Book): void{
+   addLibro(book: Book): void{
       this.books.push(book)
    }
 
